@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registro de Usuario</title>
+  <!-- font google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+    rel="stylesheet"
+  />
+  <!-- Icons -->
+  <link rel="stylesheet" href="css/font-awesome.min.css" />
+
+  <!-- Bootstrap 5 -->
+  <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
+  <link href="css/navbar-top-fixed.css" rel="stylesheet" />
+
+  <!-- <title>Infinity Swiper Effect Using Swiper.js</title> -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/swiper/swiper-bundle.min.css"
+  />
+
+  <!-- My Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
+  <link href="css/navbar-top-fixed.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img
+            id="logoImg" 
+            class="img-responsive" 
+            src="img/icons/traveling.png"
+          />
+          Viaja por Bolivia</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse text-center" id="navbarCollapse">
+          <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link" id="btn-registrarse" href="form.html">Registrarse</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 offset-lg-3 mt-5">
+        <h2>Registro de Usuario</h2>
+        <form>
+          <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre:</label>
+            <input type="text" class="form-control" id="nombre" required>
+          </div>
+          <div class="mb-3">
+            <label for="correo" class="form-label">Correo electrónico:</label>
+            <input type="email" class="form-control" id="correo" required>
+          </div>
+          <div class="mb-3">
+            <label for="telefono" class="form-label">Teléfono:</label>
+            <input type="tel" class="form-control" id="telefono" required>
+          </div>
+          <div class="mb-3">
+            <label for="ciudad" class="form-label">Ciudad:</label>
+            <input type="text" class="form-control" id="ciudad" required>
+          </div>
+          <div class="text-center">
+            <button type="submit" class="btn btn-primary" id="btn-submit">Registrarse</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <footer class="container-fluid">
+    <div class="container">
+      <div class="row">
+        <div
+          class="col-lg-8 redes-sociales d-flex flex-wrap align-items-center"
+        >
+          <a
+            class="github vibrate-1"
+            href="https://github.com/SamuWeb045"
+            target="_blank"
+            ><i class="fa fa-github"></i
+          ></a>
+          <a
+            class="linkedin vibrate-1"
+            href="https://www.linkedin.com/in/samuel-web/"
+            target="_blank"
+            ><i class="fa fa-linkedin"></i
+         ></a>
+          <a
+            class="instagram vibrate-1"
+            href="https://www.instagram.com/samuweb045/"
+            target="_blank"
+            ><i class="fa fa-instagram"></i
+          ></a>
+        </div>
+        <div class="col-lg-4 footer-text d-flex flex-wrap align-items-center">
+          <p class="m-0">© 2024 Samuel Web</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 -->
+  <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
+  <!-- Swiper.js -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <!-- My Scripts -->
+  <script src="js/scripts.js"></script>
+  <script>
+    document.getElementById("btn-submit").addEventListener("click", function(event) {
+      event.preventDefault();
+      alert("¡Registro exitoso! Serás redireccionado a la página principal.");
+      window.location.href = "index.html";
+    });
+  </script>
+</body>
+</html>
