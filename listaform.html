@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lista de Registros</title>
+  <!-- Bootstrap 5 -->
+  <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
+   <!-- font google -->
+   <link rel="preconnect" href="https://fonts.googleapis.com" />
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+   <link
+     href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+     rel="stylesheet"
+   />
+
+   <!-- Icons -->
+   <link rel="stylesheet" href="css/font-awesome.min.css" />
+
+   <!-- Bootstrap 5 -->
+   <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
+   <link href="css/navbar-top-fixed.css" rel="stylesheet" />
+
+   <!-- <title>Infinity Swiper Effect Using Swiper.js</title> -->
+   <link
+     rel="stylesheet"
+     href="https://unpkg.com/swiper/swiper-bundle.min.css"
+   />
+
+   <!-- My Styles -->
+   <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img id="logoImg" class="img-responsive" src="img/icons/traveling.png" />
+          Viaja por Bolivia
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse text-center" id="navbarCollapse">
+          <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link" id="btn-registrarse" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="btn-registrarse" href="form.html">Registrarse</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="btn-registrarse" href="listaform.html">Formulario</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container mt-5">
+    <h2>Lista de Registros</h2>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Nombre</th>
+          <th scope="col">Correo electrónico</th>
+          <th scope="col">Teléfono</th>
+          <th scope="col">Ciudad</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Aquí se mostrarán los registros dinámicamente -->
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Bootstrap 5 JS -->
+  <script src="js/bootstrap/bootstrap.min.js"></script>
+
+  <script>
+    // Obtener los parámetros de la URL
+    const urlParams = new URLSearchParams(window.location.search);
+
+    // Obtener los valores de los parámetros
+    const nombre = urlParams.get('nombre');
+    const correo = urlParams.get('correo');
+    const telefono = urlParams.get('telefono');
+    const ciudad = urlParams.get('ciudad');
+
+    // Mostrar los valores en la tabla
+    const tbody = document.querySelector('tbody');
+
+    const row = document.createElement('tr');
+    const nombreCell = document.createElement('td');
+    nombreCell.textContent = nombre;
+    row.appendChild(nombreCell);
+
+    const correoCell = document.createElement('td');
+    correoCell.textContent = correo;
+    row.appendChild(correoCell);
+
+    const telefonoCell = document.createElement('td');
+    telefonoCell.textContent = telefono;
+    row.appendChild(telefonoCell);
+
+    const ciudadCell = document.createElement('td');
+    ciudadCell.textContent = ciudad;
+    row.appendChild(ciudadCell);
+
+    tbody.appendChild(row);
+  </script>
+</body>
+
+</html>
